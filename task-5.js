@@ -46,6 +46,7 @@ class Car {
    */
   turnOn() {
     this._isOn = true;
+    this._speed = 0;
   }
 
   /*
@@ -75,7 +76,7 @@ class Car {
    */
   decelerate(value) {
     let newSpeed = this._speed - value;
-    if (newSpeed > 0) {
+    if (newSpeed <= 0) {
       this._speed = newSpeed;
     }
   }
